@@ -11,7 +11,7 @@ description = {
    detailed = [[
 Loading Caffe networks without caffe dependency
    ]],
-   homepage = "https://github.com/szagoruyko/loadcaffe",
+   homepage = "https://github.com/AtlantixJJ/loadcaffe",
    license = "BSD"
 }
 
@@ -23,7 +23,7 @@ dependencies = {
 build = {
    type = "command",
    build_command = [[
-cmake -E make_directory build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$(LUA_BINDIR)/.." -DCMAKE_INSTALL_PREFIX="$(PREFIX)" && $(MAKE)
+INCLUDE=/home/xujianjing/usr/local/include LIB=/home/xujianjing/usr/local/lib cmake -E make_directory build && cd build && INCLUDE=/home/xujianjing/usr/local/include LIB=/home/xujianjing/usr/local/lib cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$(LUA_BINDIR)/.." -DCMAKE_INSTALL_PREFIX="$(PREFIX)" && $(MAKE)
    ]],
    install_command = "cd build && $(MAKE) install"
 }
